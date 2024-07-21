@@ -15,4 +15,8 @@ for index, row in df.iterrows():
 
     pdf.line(10, 21, 200, 21)
 
+    for _ in range(row["Pages"] - 1):
+        pdf.add_page()
+
+
 pdf.output("output.pdf")
